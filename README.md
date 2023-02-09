@@ -9,5 +9,5 @@ Open http://localhost:3000 to view it in your browser.
 It will display the components.
 
 As of now:
-    GanttChart is provided.
+    Gantt Chart is provided.
 
