@@ -31,7 +31,6 @@ let data = {
             name: "DevIteration2",
             startDate: Date.parse("15 Mar 2022"),
             endDate: Date.parse("20 Mar 2022"),
-            assignedTo: ["Ramana"],
             perComp: 20,
             depends: ["Requrements", "Design"]
         }

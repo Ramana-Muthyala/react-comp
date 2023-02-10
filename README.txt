@@ -11,4 +11,4 @@ It will display the components.
 As of now:
     Gantt Chart is provided.
         Hover the tasks and you can see the pop up with task details.
-
+        

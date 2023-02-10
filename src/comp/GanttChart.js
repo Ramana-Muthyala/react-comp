@@ -196,14 +196,16 @@ export function GCPopupContent({content}) {
     if(content == null) return null;
 
     let assignedToArray = [];
-    for(let i = 0; i < content.assignedTo.length; i++) {
-        let isLast = i == (content.assignedTo.length - 1) ? true : false;
-        let assignedTo = content.assignedTo[i];
-        if(isLast) {
-            assignedToArray.push(<span key={assignedTo}>{assignedTo}</span>);
-        } else {
-            assignedToArray.push(<span key={assignedTo}>{assignedTo},&nbsp;</span>);
-        }        
+    if(content.assignedTo) {
+        for(let i = 0; i < content.assignedTo.length; i++) {
+            let isLast = i == (content.assignedTo.length - 1) ? true : false;
+            let assignedTo = content.assignedTo[i];
+            if(isLast) {
+                assignedToArray.push(<span key={assignedTo}>{assignedTo}</span>);
+            } else {
+                assignedToArray.push(<span key={assignedTo}>{assignedTo},&nbsp;</span>);
+            }        
+        }
     }
     let depArray = [];
     if(content.depends) {
@@ -227,7 +229,9 @@ export function GCPopupContent({content}) {
                 <tbody>
                     <tr><td>Start Date</td><td>{dayjs(content.startDate).format("DD MMM YYYY")}</td></tr>
                     <tr><td>End Date</td><td>{dayjs(content.endDate).format("DD MMM YYYY")}</td></tr>
-                    <tr><td>Assigned To</td><td>{assignedToArray}</td></tr>
+                    {content.assignedTo &&
+                        <tr><td>Assigned To</td><td>{assignedToArray}</td></tr>
+                    }                    
                     <tr><td style={{paddingRight: "10px"}}>Percentage Completed</td><td>{content.perComp}%</td></tr>
                     {content.depends && 
                         <tr><td>Depends On</td><td>{depArray}</td></tr>
