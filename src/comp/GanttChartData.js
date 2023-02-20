@@ -6,9 +6,9 @@ let data = {
             endDate: Date.parse("10 Mar 2022"),
             assignedTo: ["Rahul"],
             perComp: 50,
-            depends: ["Requrements"]
+            depends: ["Requirements"]
         }, {
-            name: "Requrements",
+            name: "Requirements",
             startDate: Date.parse("01 Mar 2022"),
             endDate: Date.parse("05 Mar 2022"),
             assignedTo: ["Ramana", "Rahul"],
@@ -19,7 +19,7 @@ let data = {
             endDate: Date.parse("10 Mar 2022"),
             assignedTo: ["Ramana"],
             perComp: 50,
-            depends: ["Requrements"]
+            depends: ["Requirements"]
         }, {
             name: "DevIteration1",
             startDate: Date.parse("10 Mar 2022"),
@@ -32,7 +32,7 @@ let data = {
             startDate: Date.parse("15 Mar 2022"),
             endDate: Date.parse("20 Mar 2022"),
             perComp: 20,
-            depends: ["Requrements", "Design"]
+            depends: ["Requirements", "Design"]
         }
     ]
 };
